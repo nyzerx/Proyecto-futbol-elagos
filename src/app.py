@@ -1,14 +1,16 @@
 from flask import Flask, flash, render_template, request, redirect, url_for, session, jsonify, render_template_string, send_from_directory
-import pymysql
-pymysql.install_as_MySQLdb() 
+from flask_mysqldb import MySQL
+import sqlite3 
+import os
 
 app = Flask(__name__, template_folder='./templates')
 app.secret_key = "erick"
 
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'AsociaciónDeportiva'
+app.config['MYSQL_HOST'] = 'mysql-30f2811e-elagos-asodepor.k.aivencloud.com'
+app.config['MYSQL_USER'] = 'avnadmin'
+app.config['MYSQL_PASSWORD'] = 'AVNS_36aUtbXDqvOPnVf_7TU'
+app.config['MYSQL_PORT'] = 10257
+app.config['MYSQL_DB'] = 'defaultdb'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)
 
