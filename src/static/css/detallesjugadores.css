@@ -1,0 +1,112 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    flex: 1;
+}
+
+.footer-type01 {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    height: 120px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-logo {
+    width: 140px;
+    height: auto;
+}
+
+.playerDpage {
+    padding-top: 120px; /* Separación del banner */
+    position: relative; /* Para mantener el contenido en su lugar */
+    z-index: 1; /* Para que esté sobre otros elementos */
+}
+
+.row {
+    margin-bottom: 5px; /* Separación entre secciones */
+}
+
+.player-details-section,
+.player-stats-section {
+    flex-basis: 80%; /* Ancho de las secciones */
+    margin-bottom: 3px; /* Separación entre secciones */
+}
+
+.player-details,
+.player-stats {
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.stats-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.stats-list li {
+    margin-bottom: 5px;
+}
+
+.stat-icon img {
+    width: 16px; /* Ancho del icono */
+    height: 16px; /* Altura del icono */
+    vertical-align: middle; /* Alineación vertical del icono */
+}
+
+.stat-label {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.stat-value {
+    margin-left: 5px;
+    font-size: 16px; /* Tamaño de fuente de los valores de estadísticas */
+}
+
+.icon {
+    width: 20px; /* Tamaño de los iconos */
+    height: 20px;
+}
+
+/* Ajustes de diseño para pantallas de tamaño pequeño (móviles) */
+@media screen and (max-width: 768px) {
+    .row {
+        margin-bottom: 5px; /* Reducir separación entre filas */
+    }
+
+    .player-details-section,
+    .player-stats-section {
+        width: 90%; /* Ancho de los cuadros */
+        margin: 0 auto; /* Centrar los cuadros */
+    }
+
+    .player-details {
+        background-color: #f1f1f1; /* Color de fondo */
+        padding: 20px; /* Relleno interno */
+        border-radius: 10px; /* Bordes redondeados */
+        margin-bottom: 2px; /* Separación inferior */
+    }
+
+    .player-stats {
+        background-color: #f1f1f1; /* Color de fondo */
+        padding: 20px; /* Relleno interno */
+        border-radius: 10px; /* Bordes redondeados */
+        text-align: center; /* Centrar el contenido */
+    }
+
+    .stats-header {
+        font-size: 24px; /* Tamaño de fuente más grande */
+        margin-bottom: 5px; /* Separación inferior */
+    }
+}
