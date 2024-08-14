@@ -1,5 +1,4 @@
 from flask import Flask, flash, render_template, request, redirect, url_for, session, jsonify, render_template_string, send_from_directory
-from flask_mysqldb import MySQL
 import pymysql
 pymysql.install_as_MySQLdb() 
 
